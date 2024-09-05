@@ -5,7 +5,10 @@ const clienteRoutes = require("./routerClient")
 
 const UserController = require("../controller/UserController")
 const authenticateToken = require("../middleware/authenticateToken")
+const uploadRoutes = require('./routerUploads')
 const router = Router();
+
+router.use('/image', uploadRoutes)
 
 // protegidos
 // /api/user/
